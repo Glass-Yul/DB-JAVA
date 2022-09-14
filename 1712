@@ -1,0 +1,28 @@
+//import java.util.Collections;
+//import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        
+    }
+}
+
+
+/* <1712> 첫 번째 줄에 손익분기점 즉 최초로 이익이 발생하는 판매량을 출력한다. 손익분기점이 존재하지 않으면 -1을 출력한다.
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt(); // 불변 비용
+        int B = sc.nextInt(); // 유동 비용
+        int C = sc.nextInt(); // 상품 가격
+
+        if (C <= B) { // 유동 비용이 상품 가격보다 비싸면 절대 이익을 낼 수 없음
+            System.out.println("-1");
+        } else { // 가격이 같아지는 지점 => (n*C) = A * (n*B) 이 수식을 정리하면 됨
+            System.out.println((A / (C - B)) + 1); // 이익 지점을 알고싶기 때문에 +1 해줌
+        }
+    }
+}
+ */
+
