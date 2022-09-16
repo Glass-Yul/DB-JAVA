@@ -1,0 +1,24 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+/*
+<2750> 오름차수 정렬
+ */
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt(); // 입력할 갯수
+        int arr[] = new int[num]; // num길이를 가진 배열 생성
+
+        for(int i=0;i<num;i++){
+            arr[i] = sc.nextInt();
+        }
+        Arrays.sort(arr);
+        for(int i=0;i<num;i++){
+            System.out.println(arr[i]);
+        }
+
+        sc.close();
+    }
+}
+
