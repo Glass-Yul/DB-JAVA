@@ -1,12 +1,8 @@
 import java.util.*;
 
-/*
-출력초과 됨
-*/
-
 public class Main {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.<i>in</i>);
+        Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         String[] arr = new String[n];
         String tmp = ""; // 대피장소
@@ -14,9 +10,9 @@ public class Main {
         for(int i = 0; i<n ; i++)
             arr[i] = sc.next();
 
-        Set<String> set = new HashSet<>(Arrays.<i>asList</i>(arr)); // 중복을 없애기 위해 집합 사용
+        Set<String> set = new HashSet<>(Arrays.asList(arr)); // 중복을 없애기 위해 집합 사용
         String[] str =set.toArray(new String[0]); // 필요한 기능들을 사용하기 위해 배열로 변경
-        Arrays.<i>sort</i>(str); // 중복을 제거한 배열을 오름차순으로 소트
+        Arrays.sort(str); // 중복을 제거한 배열을 오름차순으로 소트
         n=str.length;
 
         for(int j=0;j<n;j++){ // 배열 길이만큼 진행
@@ -26,10 +22,11 @@ public class Main {
                     str[i] = str[i+1];
                     str[i+1]=tmp;
                 }
-                System.<i>out</i>.println(str[i]);
+                System.out.println(str[i]);
             }
         }
 
         sc.close();
     }
 }
+
