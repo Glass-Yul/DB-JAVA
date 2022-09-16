@@ -13,9 +13,9 @@ public class Main {
         String[] arr = new String[str.length()];
 
         for(int i=0;i<str.length();i++)
-            arr[i] = String.valueOf(str.charAt(i));
+            arr[i] = String.valueOf(str.charAt(i)); // str 문자열을 하나씩 잘라 배열에 저장
 
-        Arrays.sort(arr, Collections.reverseOrder());
+        Arrays.sort(arr, Collections.reverseOrder()); // 내림차순
 
         for(int i=0;i< arr.length;i++)
             System.out.print(arr[i]);
