@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+/*
+<25305> 커트라인
+ */
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // 총 학생수
+        int max = sc.nextInt(); // 커트라인
+        int arr[] = new int[n]; // n길이를 가진 배열 생성
+
+        for(int i=0;i<n;i++){ // 점수 입력
+            arr[i] = sc.nextInt();
+        }
+        // Objer타입이 아닌 primitive 타입이여서 Wrapper클래스로 박싱해주어야 reverseOrder 사용가능해진다.
+        Integer[] tmp = Arrays.stream(arr).boxed().toArray(Integer[]::new); // Integer는 Objer타입임
+        Arrays.sort(tmp, Comparator.reverseOrder()); // 내림차순
+        
+        System.out.println(tmp[max-1]);
+
+
+        sc.close();
+    }
+}
+
