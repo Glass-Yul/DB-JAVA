@@ -1,5 +1,9 @@
 import java.util.*;
 
+/*
+출력초과 뜸
+*/
+
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
