@@ -1,7 +1,7 @@
 import java.util.*;
 
 /*
-출력초과 뜸
+출력초과 뜸 => 답은 잘 나옴
 */
 
 public class Main {
