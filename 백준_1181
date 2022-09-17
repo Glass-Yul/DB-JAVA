@@ -1,9 +1,5 @@
 import java.util.*;
 
-/*
-출력초과 뜸 => 답은 잘 나옴
-*/
-
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -26,10 +22,12 @@ public class Main {
                     str[i] = str[i+1];
                     str[i+1]=tmp;
                 }
-                System.out.println(str[i]);
             }
         }
+        for(int i=0;i< n-1;i++)
+            System.out.println(str[i]);
 
         sc.close();
     }
 }
+
