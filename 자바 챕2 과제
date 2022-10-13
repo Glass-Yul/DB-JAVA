@@ -1,0 +1,211 @@
+<OpenCallenge>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        // 입력을 받기위해 표준 입출력 객체 사용
+
+        System.out.println("가위 바위 보 게임입니다. 가위/바위/보 중에서 입력하세요");
+
+        System.out.printf("철수 : ");
+        String str1 = sc.next(); // 철수 데이터
+        System.out.printf("영희 : ");
+        String str2 = sc.next(); // 영희 데이터
+
+        if(str1.equals("가위")){ // 철수가 가위를 냈을 때
+            if(str2.equals("가위")) // 영희가 가위를 냈을 때
+                System.out.println("무승부입니다.");
+            else if(str2.equals("바위")) // 영희가 바위를 냈을 때
+                System.out.println("영희가 이겼습니다.");
+            else // 영희가 보를 냈을 때
+                System.out.println("철수가 이겼습니다.");
+        } else if(str1.equals("바위")){ // 철수가 바위를 냈을 때
+            if(str2.equals("가위")) 
+                System.out.println("철수가 이겼습니다.");
+            else if(str2.equals("바위"))
+                System.out.println("무승부입니다.");
+            else
+                System.out.println("영희가 이겼습니다.");
+        } else if(str1.equals("보")){ // 철수가 보를 냈을 때
+            if(str2.equals("가위"))
+                System.out.println("영희가 이겼습니다.");
+            else if(str2.equals("바위"))
+                System.out.println("철수가 이겼습니다.");
+            else
+                System.out.println("무승부입니다.");
+        } else 
+            System.out.println("가위/바위/보가 아님");
+            // 다른 값을 입력시 오류 메세지를 줌
+
+
+        sc.close(); // 입력 객체 해제
+    }
+
+}
+
+<1번>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        // 입력을 받기위해 표준 입출력 객체 사용
+
+        System.out.printf("두 정수를 입력하세요 >> ");
+        int x = sc.nextInt(); // 정수를 받으므로 nextInt 사용
+        int y = sc.nextInt(); // 마찬가지로 정수를 받으므로 nextInt 사용
+        System.out.printf("%d + %d은 %d", x,y, x+y);
+        // 마지막 결과 출력
+
+        sc.close(); // 입력 객체 해제
+    }
+
+}
+
+<3번>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        // 입력을 받기위해 표준 입출력 객체 사용
+
+        System.out.printf("x값을 입력하세요 >> ");
+        // 어떤 값을 받아야하는지 출력함
+        int x = sc.nextInt(); // 정수를 받으므로 nextInt 사용
+        double y = (x*x)-(3*x)+7; // 방정식 연산을 미리 계산하여 y에 대입
+        System.out.printf("x=%d, y=%.0f",x,y);
+        // 마지막 결과 출력
+
+        sc.close(); // 입력 객체 해제
+    }
+
+}
+
+
+<7번>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        // 입력을 받기위해 표준 입출력 객체 사용
+
+        System.out.printf("학점을 입력하세요 >> ");
+        // printf로 개행을 막음
+        char c = sc.next().charAt(0);
+        // next()는 문자열을 받으므로 문자열을 받았다치고
+        // 0번째 인덱스 문자 하나를 받아 c에 대입함
+        switch (c){
+            case 'A','B' -> System.out.println("Excellent"); // 'A','B'이면
+            case 'C','D' -> System.out.println("Good"); // 'C','D' 이면
+            case 'F' -> System.out.println("Bye"); // 'F'이면
+            default -> System.out.println("해당되는 값이 아님"); // 아무것도 해당되지 않으면
+        }
+
+        sc.close(); // 입력 객체 해제
+    }
+
+}
+
+
+<8-1번>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        // 입력을 받기위해 표준 입출력 객체 사용
+
+        System.out.printf("커피 주문하세요 >> "); 
+        String str = sc.next(); // 커피 이름 받음
+        int n = sc.nextInt(); // 갯수 받음
+        
+        if(str.equals("에스프레소")) // 만약 에스프레소면
+            System.out.printf("%d원입니다.",2000*n); // 해당 가격*개수
+        else if(str.equals("아메리카노")) // 만약 아메리카노면
+            System.out.printf("%d원입니다.",2500*n); // 해당 가격*개수
+        else if(str.equals("카푸치노")) // 만약 카푸치노면
+            System.out.printf("%d원입니다.",3000*n); // 해당 가격*개수
+        else if(str.equals("카페라떼")) // 만약 카페라떼면
+            System.out.printf("%d원입니다.",3500*n); // 해당 가격*개수
+        else 
+            System.out.println("잘못 입력하셨습니다."); // 아무것도 해당이 안 되면
+        
+
+        sc.close(); // 입력 객체 해제
+    }
+
+}
+
+
+<8-2번>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        // 입력을 받기위해 표준 입출력 객체 사용
+
+        System.out.printf("커피 주문하세요 >> "); 
+        String str = sc.next(); // 커피 이름 받음
+        int n = sc.nextInt(); // 갯수 받음
+
+        switch (str){
+            case "에스프레소" -> System.out.printf("%d원입니다.",2000*n);
+            // 에스프레소면 해당가격*갯수
+            case "아메리카노" -> System.out.printf("%d원입니다.",2500*n);
+            // 아메리카노면 해당가격*갯수
+            case "카푸치노" -> System.out.printf("%d원입니다.",3000*n);
+            // 카푸치노면 해당가격*갯수
+            case "카페라떼" -> System.out.printf("%d원입니다.",3500*n);
+            // 카페라떼면 해당가격*갯수
+            default -> System.out.println("잘못 입력하셨습니다."); // 아무것도 해당이 안 되면
+        }
+
+        sc.close(); // 입력 객체 해제
+    }
+
+}
+
+<10번>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        // 입력을 받기위해 표준 입출력 객체 사용
+
+        System.out.printf("커피 주문하세요 >> "); 
+        String str = sc.next(); // 커피 이름 받음
+        int n = sc.nextInt(); // 갯수 받음
+
+        if(str.equals("에스프레소")){ // 만약 에스프레소면
+            if(n>=10){ // 10개 이상이면
+                System.out.printf("%.0f원입니다.",(2000*n)*0.05); // 해당 가격*개수
+            } else
+                System.out.printf("%d원입니다.",2000*n); // 해당 가격*개수
+        }
+        else if(str.equals("아메리카노")) // 만약 아메리카노면
+            System.out.printf("%d원입니다.",2500*n); // 해당 가격*개수
+        else if(str.equals("카푸치노")) // 만약 카푸치노면
+            System.out.printf("%d원입니다.",3000*n); // 해당 가격*개수
+        else if(str.equals("카페라떼")) // 만약 카페라떼면
+            System.out.printf("%d원입니다.",3500*n); // 해당 가격*개수
+        else
+            System.out.println("잘못 입력하셨습니다."); // 아무것도 해당이 안 되면
+
+
+
+        sc.close(); // 입력 객체 해제
+    }
+
+}
